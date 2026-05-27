@@ -82,7 +82,7 @@ Cuando el usuario invoca este comando con un argumento:
 3. **Lee la fuente completa** (no chunks).
 
 4. **Conversa brevemente** con el usuario: "Estas son las 3-5 ideas clave que
-   identifiqué. ¿Algún énfasis particular antes de filar?"
+   identifiqué. ¿Algún énfasis particular antes de archivar?"
 
 5. **Escribe `wiki/fuentes/<slug>.md`** con:
    - Frontmatter completo (titulo, tipo: fuente, autores, url, fecha_publicacion,
@@ -141,7 +141,7 @@ Cuando el usuario invoca este comando con un argumento:
    ## [2026-05-26] consultar | <pregunta resumida en ≤80 chars>
 
    - Páginas consultadas: [[conceptos/X]], [[fuentes/Y]]
-   - Filed: [[respuestas/<slug>]]   ← omitir si el usuario no quiso filar
+   - Archivada: [[respuestas/<slug>]]   ← omitir si el usuario no quiso archivar
    ```
 
 ## Flujo: `/revisar`

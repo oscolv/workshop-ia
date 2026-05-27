@@ -1,7 +1,7 @@
 # Índice del Wiki
 
 Catálogo de todas las páginas. El agente lo actualiza al final de cada
-`/ingerir` y `/consultar` (cuando filas la respuesta).
+`/ingerir` y `/consultar` (cuando archivas la respuesta).
 
 ## Entidades
 
@@ -30,4 +30,4 @@ Catálogo de todas las páginas. El agente lo actualiza al final de cada
 
 ## Respuestas
 
-*(vacío — usa `/consultar` y dile al agente que fila la respuesta)*
+*(vacío — usa `/consultar` y dile al agente que archive la respuesta)*

@@ -93,7 +93,7 @@ Después: ingiere tu primera fuente y deja que el agente arme el resto.
 | Comando | Para qué |
 |---|---|
 | `/ingerir <url\|ruta\|texto>` | Añade una fuente al wiki, actualiza páginas, marca contradicciones |
-| `/consultar <pregunta>` | Pregunta contra el wiki; opcionalmente fila la respuesta |
+| `/consultar <pregunta>` | Pregunta contra el wiki; opcionalmente archiva la respuesta |
 | `/revisar` | Health check: links rotos, huérfanos, contradicciones, sugerencias |
 
 El detalle de cada flujo vive en `CLAUDE.md`.
@@ -127,6 +127,22 @@ Esta implementación es la base. En la fase 2 añadiremos:
 
 Los nombres `app/`, `pages/`, `public/`, `src/`, `package.json` están
 reservados — este repo evita usarlos en la raíz para no chocar con la fase 2.
+
+## `docs/superpowers/` — artefactos del diseño
+
+La carpeta `docs/superpowers/` contiene los documentos que generaron este
+repo:
+
+- `specs/2026-05-26-llm-wiki-reference-design.md` — el documento de diseño
+  (decisiones, alcance, estructura).
+- `plans/2026-05-26-llm-wiki-reference.md` — el plan de implementación
+  bite-sized en 10 tareas que se ejecutó para construir el seed.
+
+Se dejan visibles a propósito: el taller no es sólo sobre el patrón LLM+Wiki
+sino también sobre **cómo trabajar con agentes** (brainstorming → spec →
+plan → subagent-driven execution → review). Estos archivos son evidencia del
+proceso. Si forkeas el repo para tu propio dominio, puedes borrarlos sin
+afectar nada del wiki.
 
 ## Licencia y atribución
 

@@ -30,6 +30,14 @@ UCL y NYU.
 
 ## Citas clave
 
+> [!nota]
+> La segunda cita de abajo está **intencionalmente mal atribuida** como
+> ejemplo pedagógico de detección de errores. El wiki la deja visible (en
+> vez de borrarla) para que el flujo `/revisar` la pueda marcar y para que
+> los atendidos vean cómo el agente anota correcciones sin destruir
+> historial. Ver `wiki/log.md` para la entrada del `/revisar` que la
+> detectó.
+
 > "We introduce retrieval-augmented generation (RAG) — models which combine
 > pre-trained parametric and non-parametric memory for language generation."
 

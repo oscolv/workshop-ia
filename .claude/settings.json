@@ -9,7 +9,6 @@
       "Bash(mkdir:*)",
       "Bash(cp:*)",
       "Bash(mv:*)",
-      "Bash(rm raw/_ejemplo:*)",
       "Bash(git:*)",
       "Read(//*)",
       "Edit(raw/**)",

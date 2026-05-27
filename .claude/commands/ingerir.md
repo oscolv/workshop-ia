@@ -10,7 +10,7 @@ $ARGUMENTS
 
 Recuerda los puntos clave:
 - Verificar duplicados antes de escribir.
-- Conversar brevemente con el usuario sobre énfasis antes de filar.
+- Conversar brevemente con el usuario sobre énfasis antes de archivar.
 - Actualizar páginas existentes en vez de duplicar.
 - Marcar contradicciones con callout, nunca sobrescribir.
 - Actualizar index.md y append a log.md al final.
