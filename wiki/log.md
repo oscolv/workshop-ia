@@ -60,3 +60,9 @@ grep "^## \[" wiki/log.md | tail -10
 - Sugerencias: ingerir Kaplan 2020 (scaling laws) y Hoffmann 2022
   (Chinchilla) para resolver mejor la contradicción registrada en
   [[conceptos/rlhf]].
+
+## [2026-05-26] consultar | ¿Qué es RAG?
+
+- Páginas consultadas: [[conceptos/rag]], [[fuentes/2020-lewis-rag]]
+- No archivada (pregunta genérica; la respuesta reproduce el contenido de
+  [[conceptos/rag]] sin síntesis nueva).
