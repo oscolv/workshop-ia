@@ -51,7 +51,7 @@ grep "^## \[" wiki/log.md | tail -10
 - Conceptos sin página: 0 hallados a este punto.
 - Contradicciones no marcadas: 0 (la única detectada quedó marcada en
   [[conceptos/rlhf]]).
-- Frontmatter: consistente en las 16 páginas.
+- Frontmatter: consistente en las 16 páginas de contenido (sin contar index y log).
 - Stale: ninguna; el wiki es nuevo.
 - Hallazgo menor: en [[fuentes/2020-lewis-rag]] había una cita atribuida
   incorrectamente a Lewis et al. cuando en realidad es de Ouyang et al.

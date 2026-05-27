@@ -50,8 +50,10 @@ documento original del patrón (referenciado en el `CLAUDE.md`).
 
 ## Cómo arrancar (con el ejemplo seed)
 
+**Prerrequisito:** instala [Claude Code](https://claude.com/claude-code) (`npm i -g @anthropic-ai/claude-code` o descarga desde el sitio).
+
 1. Clona o forkea este repo.
-2. Ábrelo con [Claude Code](https://claude.com/claude-code):
+2. Ábrelo con Claude Code:
    ```bash
    cd llm+wiki
    claude

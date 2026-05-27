@@ -16,7 +16,10 @@ trabajo es tuyo.
    lo que vive aquí lo escribiste tú.
 3. **`CLAUDE.md`** (este archivo) — el contrato. Define convenciones, flujos,
    manejo de errores. Si necesitas crear una convención nueva, primero edita
-   este archivo y avísale al usuario.
+   este archivo y avísale al usuario. (Nota: `.claude/settings.json`
+   intencionalmente NO te da permiso automático para editar este archivo —
+   tendrás que pedir aprobación explícita al usuario. Es la salvaguarda
+   contra schema-drift no autorizado.)
 
 ## Convención de frontmatter
 
