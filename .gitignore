@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Obsidian — cada quien configura su vault
+.obsidian/
+
+# Phase 2 (Next.js) — pre-emptive
+node_modules/
+.next/
+.vercel/
