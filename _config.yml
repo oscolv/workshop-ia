@@ -1,0 +1,29 @@
+# Configuración mínima para GitHub Pages.
+# Renderiza README.md como home y permite navegar al contenido del wiki como
+# HTML estático. NOTA: Jekyll no renderiza [[wikilinks]] estilo Obsidian ni
+# callouts > [!nota] como elementos visuales — aparecen como texto plano.
+# Eso se resuelve en la fase 2 del taller (Next.js + Vercel).
+
+theme: jekyll-theme-cayman
+title: "Workshop IA — LLM + Wiki"
+description: "Implementación de referencia del patrón LLM Wiki para el Taller IA (UAM Azcapotzalco)"
+show_downloads: false
+
+# No publicar a Pages contenido que no es para el público del taller:
+exclude:
+  - raw/                    # fuentes ingeridas (acceso via repo si interesa)
+  - docs/superpowers/       # artefactos del proceso (visibles en el repo, no en Pages)
+  - .claude/                # configuración del agente
+  - CLAUDE.md               # contrato del agente (referencia interna)
+  - LICENSE
+  - .editorconfig
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+# Permitir markdown extendido
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
