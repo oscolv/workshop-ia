@@ -139,6 +139,7 @@ Copia `.env.example` a `.env.local` y rellena (chat solo funciona con
 |---|---|
 | `AI_GATEWAY_API_KEY` | Vercel AI Gateway key (vercel.com/dashboard/ai-gateway) |
 | `CHAT_MODEL` | Modelo default. Ej: `anthropic/claude-sonnet-4-6` |
+| `DEEPSEEK_API_KEY` | Alternativa sin Gateway: con `CHAT_MODEL=deepseek/deepseek-chat` va directo a DeepSeek (no consume créditos de Vercel) |
 | `CHAT_RATE_LIMIT_PER_HOUR` | Mensajes/hora/IP (default 10) |
 | `BOTID_ENABLED` | `true` en producción; `false` en local |
 
