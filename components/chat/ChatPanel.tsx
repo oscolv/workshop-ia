@@ -31,7 +31,7 @@ const EXAMPLE_PROMPTS = [
 ]
 
 export function ChatPanel() {
-  const { messages, sendMessage, status } = useChat()
+  const { messages, sendMessage, status, error } = useChat()
 
   const handleSubmit = (message: PromptInputMessage) => {
     if (message.text.trim()) sendMessage({ text: message.text })
@@ -83,6 +83,13 @@ export function ChatPanel() {
               </MessageContent>
             </Message>
           ))}
+          {error && (
+            <div className="m-4 rounded-md border border-red-500/40 bg-red-500/10 p-3 text-sm">
+              El chat no pudo responder: {error.message || 'error desconocido'}.
+              Revisa que <code>AI_GATEWAY_API_KEY</code> esté configurada y que tu
+              cuenta de AI Gateway esté activa.
+            </div>
+          )}
         </ConversationContent>
         <ConversationScrollButton />
       </Conversation>

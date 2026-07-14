@@ -19,10 +19,12 @@ export default async function WikiSlugPage({ params }: { params: Promise<{ slug:
   const { slug } = await params
   const page = getPage(slug.join('/'))
   if (!page) notFound()
+  // El H1 del markdown duplicaría el título que ya pinta PageHeader.
+  const body = page.body.replace(/^#\s[^\n]*\n+/, '')
   return (
     <article>
       <PageHeader page={page} />
-      <MarkdownRenderer content={page.body} />
+      <MarkdownRenderer content={body} />
     </article>
   )
 }
