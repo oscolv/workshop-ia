@@ -23,12 +23,9 @@ import {
   ToolOutput,
 } from '@/components/ai-elements/tool'
 import { MarkdownRenderer } from '@/components/wiki/MarkdownRenderer'
+import { wikiConfig } from '@/wiki.config'
 
-const EXAMPLE_PROMPTS = [
-  '¿Qué es RAG y cómo se relaciona con el Transformer?',
-  '¿Cuál es la diferencia entre fine-tuning y RLHF?',
-  'Resume las contradicciones marcadas en el wiki.',
-]
+const EXAMPLE_PROMPTS = wikiConfig.chat.examplePrompts
 
 export function ChatPanel() {
   const { messages, sendMessage, status, error } = useChat()
@@ -96,7 +93,7 @@ export function ChatPanel() {
 
       <PromptInput onSubmit={handleSubmit}>
         <PromptInputBody>
-          <PromptInputTextarea placeholder="¿Qué es RAG? ¿Cómo se relaciona InstructGPT con el Transformer?" />
+          <PromptInputTextarea placeholder={wikiConfig.chat.placeholder} />
         </PromptInputBody>
         <PromptInputFooter>
           <PromptInputSubmit status={status} className="ml-auto" />

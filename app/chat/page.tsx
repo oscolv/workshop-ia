@@ -1,6 +1,7 @@
 import { ChatPanel } from '@/components/chat/ChatPanel'
+import { wikiConfig } from '@/wiki.config'
 
-export const metadata = { title: 'Chat · Workshop IA' }
+export const metadata = { title: `Chat · ${wikiConfig.shortName}` }
 
 export default function ChatPage() {
   return (

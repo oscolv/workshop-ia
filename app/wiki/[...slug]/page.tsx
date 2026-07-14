@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { listPages, getPage } from '@/lib/wiki'
 import { MarkdownRenderer } from '@/components/wiki/MarkdownRenderer'
 import { PageHeader } from '@/components/wiki/PageHeader'
+import { wikiConfig } from '@/wiki.config'
 
 export function generateStaticParams() {
   return listPages().map(p => ({ slug: p.slug.split('/') }))
@@ -12,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const page = getPage(slug.join('/'))
   if (!page) return { title: 'No encontrado' }
-  return { title: `${page.frontmatter.titulo} · Workshop IA` }
+  return { title: `${page.frontmatter.titulo} · ${wikiConfig.shortName}` }
 }
 
 export default async function WikiSlugPage({ params }: { params: Promise<{ slug: string[] }> }) {

@@ -88,6 +88,12 @@ cp wiki/log.empty.md   wiki/log.md
 
 Después: ingiere tu primera fuente y deja que el agente arme el resto.
 
+**Y edita `wiki.config.ts`** — es el único archivo de la app web acoplado al
+tema: nombre del sitio, descripción del tema (se inyecta al system prompt del
+chat), prompts de ejemplo, URL del repo y textos del footer. La app y sus
+tests son estructurales: funcionan con cualquier wiki que siga el contrato
+de `CLAUDE.md`, sin importar el tema ni cuántas páginas tenga.
+
 ## Comandos disponibles
 
 | Comando | Para qué |

@@ -3,13 +3,14 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SiteHeader } from '@/components/SiteHeader'
 import { SiteFooter } from '@/components/SiteFooter'
+import { wikiConfig } from '@/wiki.config'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 
 export const metadata = {
-  title: 'Workshop IA · LLM+Wiki',
-  description: 'Implementación de referencia del patrón LLM+Wiki para el Taller IA (UAM Azcapotzalco)',
+  title: wikiConfig.siteName,
+  description: wikiConfig.description,
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
