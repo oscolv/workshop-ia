@@ -112,21 +112,46 @@ El wiki está pensado para verse bien en Obsidian:
 No es obligatorio: cualquier editor markdown funciona. GitHub renderiza casi
 todo (los wikilinks aparecen como texto, no como enlaces).
 
-## Fase 2 — Despliegue en Vercel (próximamente en el taller)
+## Fase 2 — App web (Next.js + Vercel)
 
-Esta implementación es la base. En la fase 2 añadiremos:
+Ya implementada. La app vive en `app/`, `components/`, `lib/` al mismo root
+que el wiki. Lee `wiki/` directamente desde el filesystem.
 
-- Una app **Next.js** (App Router) en `app/` que lee `wiki/` y lo sirve como
-  sitio navegable.
-- Renderizado de markdown con soporte de wikilinks y callouts estilo Obsidian.
-- Búsqueda básica sobre el frontmatter.
-- Un **chat** contra el wiki via Vercel AI Gateway con tool calling sobre los
-  archivos markdown (lectura; las escrituras siguen pasando por Claude Code
-  en local).
-- Deploy con `vercel link` + `vercel deploy`.
+### Correr en local
 
-Los nombres `app/`, `pages/`, `public/`, `src/`, `package.json` están
-reservados — este repo evita usarlos en la raíz para no chocar con la fase 2.
+```bash
+corepack enable    # si pnpm no está instalado
+pnpm install
+pnpm dev           # http://localhost:3000
+```
+
+Tres rutas:
+- `/` — landing con stats del wiki
+- `/wiki` — índice navegable; cada página renderiza wikilinks y callouts
+- `/chat` — conversación contra el wiki vía Claude Sonnet 4.6 + tool calling
+
+### Variables de entorno
+
+Copia `.env.example` a `.env.local` y rellena (chat solo funciona con
+`AI_GATEWAY_API_KEY` configurada):
+
+| Variable | Para qué |
+|---|---|
+| `AI_GATEWAY_API_KEY` | Vercel AI Gateway key (vercel.com/dashboard/ai-gateway) |
+| `CHAT_MODEL` | Modelo default. Ej: `anthropic/claude-sonnet-4-6` |
+| `CHAT_RATE_LIMIT_PER_HOUR` | Mensajes/hora/IP (default 10) |
+| `BOTID_ENABLED` | `true` en producción; `false` en local |
+
+### Deploy a Vercel
+
+```bash
+vercel link                # asocia repo a project
+vercel env add AI_GATEWAY_API_KEY production
+vercel env add CHAT_MODEL production
+vercel deploy --prod
+```
+
+Push a `main` dispara redeploy automático (cuando el repo está linkeado).
 
 ## `docs/superpowers/` — artefactos del diseño
 
