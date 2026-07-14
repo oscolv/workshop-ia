@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* next-themes pone la clase .dark en <html>; Tailwind 4 por default usa
    prefers-color-scheme, así que redefinimos el variant dark a la clase. */

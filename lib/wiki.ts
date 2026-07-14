@@ -38,6 +38,11 @@ function readAllPages(): WikiPage[] {
       const fullPath = path.join(dir, file)
       const raw = fs.readFileSync(fullPath, 'utf-8')
       const { data, content } = matter(raw)
+      // YAML parsea fechas sin comillas como Date; el resto de la app
+      // espera strings YYYY-MM-DD.
+      for (const [key, value] of Object.entries(data)) {
+        if (value instanceof Date) data[key] = value.toISOString().slice(0, 10)
+      }
       const slug = `${category}/${file.replace(/\.md$/, '')}`
       pages.push({
         slug,
