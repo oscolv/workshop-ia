@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { Route } from 'next'
 import { getIndex } from '@/lib/wiki'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -25,7 +26,7 @@ export default function HomePage() {
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
           <Button asChild size="lg"><Link href="/wiki">Explorar wiki →</Link></Button>
-          <Button asChild size="lg" variant="outline"><Link href="/chat">Preguntarle al wiki</Link></Button>
+          <Button asChild size="lg" variant="outline"><Link href={'/chat' as Route}>Preguntarle al wiki</Link></Button>
         </div>
       </section>
 
