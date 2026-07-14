@@ -17,3 +17,4 @@ node_modules/
 
 # Env locales (no commitear secrets)
 .env*.local
+tsconfig.tsbuildinfo
