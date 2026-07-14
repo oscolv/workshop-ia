@@ -1,0 +1,4 @@
+# esbuild y sharp necesitan correr sus build scripts post-install.
+allowBuilds:
+  esbuild: true
+  sharp: true

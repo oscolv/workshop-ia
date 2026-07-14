@@ -14,3 +14,6 @@ Thumbs.db
 node_modules/
 .next/
 .vercel/
+
+# Env locales (no commitear secrets)
+.env*.local

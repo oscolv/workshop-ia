@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* next-themes pone la clase .dark en <html>; Tailwind 4 por default usa
+   prefers-color-scheme, así que redefinimos el variant dark a la clase. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: 48 33% 97%;
+  --foreground: 220 13% 18%;
+  --muted: 48 20% 92%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 33 92% 51%;
+  --accent-foreground: 0 0% 100%;
+  --border: 48 15% 85%;
+  --ring: 33 92% 51%;
+}
+
+.dark {
+  --background: 25 15% 12%;
+  --foreground: 48 20% 92%;
+  --muted: 25 12% 18%;
+  --muted-foreground: 48 10% 65%;
+  --accent: 33 75% 55%;
+  --accent-foreground: 25 15% 12%;
+  --border: 25 12% 22%;
+  --ring: 33 75% 55%;
+}
+
+/* Genera las utilidades bg-background, text-foreground, border-border, etc.
+   a partir de las variables de arriba (config CSS-first de Tailwind 4). */
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-border: hsl(var(--border));
+  --color-ring: hsl(var(--ring));
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
